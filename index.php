@@ -52,17 +52,30 @@
 </head>
 <body>
 
-<ul>
-    <?php foreach ($hotels as $hotel) : ?>
-        <li><?= $hotel['name']?></li>
-        <ul>
-            <li><?= $hotel['description']?></li>
-            <li><?= $hotel['parking']?></li>
-            <li><?= $hotel['vote']?></li>
-            <li><?= $hotel['distance_to_center']?></li>
-        </ul>
-    <?php endforeach ?>
-</ul>
+<h2>Hotels</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Parking</th>
+            <th scope="col">Vote</th>
+            <th scope="col">Distance To Center</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($hotels as $hotel) : ?>
+            <tr>
+                <th scope="row"><?= $hotel['name'] ?></th>
+                <td><?= $hotel['description']?></td>
+                <td><?= $hotel['parking'] ? 'Yes' : 'No'?></td>
+                <td><?= $hotel['vote']?> / 5</td>
+                <td><?= $hotel['distance_to_center']?> Km</td>
+            </tr>
+            <?php endforeach ?>
+  </tbody>
+</table>
 
 </body>
 </html>
