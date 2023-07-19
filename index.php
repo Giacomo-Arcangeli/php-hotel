@@ -52,7 +52,7 @@
 </head>
 <body>
 
-<h2>Hotels</h2>
+<h1 class="text-center my-4">Hotels</h1>
 
 <table class="table">
     <thead>
